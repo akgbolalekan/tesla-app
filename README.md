@@ -1,4 +1,6 @@
 HOW TO BUILD AND RUN THE CONTAINER LOCALLY
+
+
   Git clone the repository into your local server
     - git clone https://github.com/akgbolalekan/tesla-app.git
 
@@ -14,6 +16,8 @@ HOW TO BUILD AND RUN THE CONTAINER LOCALLY
     - http://localhost:8090/wfapp
 
 HOW TO DEPLOY THE APPLICATION TO AWS EC2
+
+
 
  AWS Setup
 
@@ -53,6 +57,8 @@ HOW TO DEPLOY THE APPLICATION TO AWS EC2
 
 
 HOW TO SET UP HTTPS FOR THE APPLICATION
+
+
 
    Install Certbot for Let's Encrypt SSL certificate installation:
       - sudo yum install -y certbot python2-certbot-nginx
