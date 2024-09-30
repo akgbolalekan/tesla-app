@@ -21,13 +21,13 @@ HOW TO DEPLOY THE APPLICATION TO AWS EC2
 
  AWS Setup
 
-    Launch an EC2 Instance:
-       -Go to the AWS EC2 Dashboard and launch a new instance using Amazon Linux 2 or Ubuntu 20.04.
-       -Ensure it has enough resources to run Docker (t2.micro is sufficient for small apps).
-       -Assign a Security Group that allows inbound traffic on ports:
-            HTTP (Port 80)
-            HTTPS (Port 443)
-            Custom TCP (Port 8090) port number to be used for container
+   Launch an EC2 Instance:
+      -Go to the AWS EC2 Dashboard and launch a new instance using Amazon Linux 2 or Ubuntu 20.04
+      -Ensure it has enough resources to run Docker (t2.micro is sufficient for small apps)
+      -Assign a Security Group that allows inbound traffic on ports:
+          HTTP(Port 80)
+          HTTPS(Port 443)
+          Custom TCP (Port 8090) port number to be used for container
 
    Install Docker on EC2
       - sudo yum update -y
