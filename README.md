@@ -71,34 +71,39 @@ HOW TO SET UP HTTPS FOR THE APPLICATION
    Redirect from HTTP (port 8090) to HTTPS
       -sudo nano /etc/nginx/sites-available/irechargetest.freemanboss.tech 
     And edit the file to pass 
- "server {
-    listen 80;
-    server_name irechargetest.freemanboss.tech;
-    return 301 https://$server_name$request_uri;
+
+    
+# server {
+    #listen 80;
+    #server_name irechargetest.freemanboss.tech;
+    #return 301 https://$server_name$request_uri;
 }
-"
+
    Update the configuration to include a redirect from HTTP to HTTPS and remove the port:
       -Configure HTTPS and remove /wfapp path
 
 Edit the file again to pass
-"server {
-    listen 443 ssl;
-    server_name irechargetest.freemanboss.tech;
 
-    ssl_certificate /etc/letsencrypt/live/irechargetest.freemanboss.tech/fullchain.pem;
-    ssl_certificate_key /etc/letsencrypt/live/irechargetest.freemanboss.tech/privkey.pem;
-    include /etc/letsencrypt/options-ssl-nginx.conf;
-    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem;
 
-    root /var/www/irechargetest;  # Change to your app's actual root path
-    index index.html index.htm index.nginx-debian.html;
 
-    location / {
+#server {
+    #listen 443 ssl;
+    #server_name irechargetest.freemanboss.tech;
+
+    #ssl_certificate /etc/letsencrypt/live/irechargetest.freemanboss.tech/fullchain.pem;
+    #ssl_certificate_key /etc/letsencrypt/live/irechargetest.freemanboss.tech/privkey.pem;
+    #include /etc/letsencrypt/options-ssl-nginx.conf;
+    #ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem;
+
+    #root /var/www/irechargetest;  # Change to your app's actual root path
+    #index index.html index.htm index.nginx-debian.html;
+
+    #location / {
         try_files $uri $uri/ =404;
     }
 
 }
-"
+
 
 Test your nginx configuration with sudo nginx -t
 Then restart the nginx sudo systemctl restart nginx
